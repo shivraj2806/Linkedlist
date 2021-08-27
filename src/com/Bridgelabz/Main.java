@@ -7,8 +7,8 @@ public class Main {
         addLinkList.add(56);
         addLinkList.add(30);
         addLinkList.add(70);
-        Node newHead = addLinkList.popMethod();
-        addLinkList.display(newHead);
+        addLinkList.popLastMethod();
+        addLinkList.display(addLinkList.head);
 
     }
 }

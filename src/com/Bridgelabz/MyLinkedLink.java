@@ -34,13 +34,6 @@ class Node {
             newNode.next = head;
             head = newNode;
         }
-            public boolean emptyCheck () {
-                if (head == null) {
-                    return true;
-
-                }
-                return false;
-            }
 
     //*********************************UC3 Insert at the tail************************************
             public void insertAtTail(int data) {
@@ -79,7 +72,7 @@ class Node {
     temp.next = newNode;
     newNode.next = nxt;
 }
-//*****************************UC5 Delete the the frist element**********************
+//*****************************UC5 Delete the  first element**********************
 public Node popMethod() {
     if (emptyCheck()) {
         System.out.println("Empty Linkedlist");
@@ -88,6 +81,27 @@ public Node popMethod() {
     Node newHead = head.next;
     return newHead;
 }
+   //******************************UC6 Delete at lhe last element**************************
+   public void popLastMethod() {
+       if (emptyCheck()) {
+           System.out.println("Empty Linkedlist");
+           return;
+       }
+
+       Node temp = head;
+       while (temp.next.next != null) {
+           temp = temp.next;
+       }
+       temp.next = null;
+   }
+        public boolean emptyCheck () {
+            if (head == null) {
+                return true;
+
+            }
+            return false;
+        }
+
         public void display (Node head){
             if (emptyCheck()) {
                 System.out.println("Empty Linkedlist");
@@ -100,7 +114,7 @@ public Node popMethod() {
                 temp = temp.next;
             }
         }
-    }
+}
 
 
 

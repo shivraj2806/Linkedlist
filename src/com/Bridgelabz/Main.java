@@ -6,12 +6,11 @@ public class Main {
         MyLinkedLink addLinkList = new MyLinkedLink();
         addLinkList.add(56);
         addLinkList.add(30);
+        addLinkList.add(40);
         addLinkList.add(70);
-        addLinkList.popLastMethod();
-        addLinkList.insertAtMidPosition(3,40);
+        addLinkList.sort();
         addLinkList.display(addLinkList.head);
 
-        addLinkList.showSize();
     }
 
 }

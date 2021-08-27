@@ -132,7 +132,30 @@ class Node {
             System.out.println("Length Of Linkedlist: " + count);
         }
 
-        public void display(Node head) {
+     //***********************UC10 Create ordered linklist  ascending order of data************************
+     public void sort() {
+         Node current = head;
+         Node nxt;
+
+         while (current != null) {
+             nxt = current.next;
+
+             while (nxt != null) {
+
+                 if (current.data >= nxt.data) {
+
+                     int temp = current.data;
+                     current.data = nxt.data;
+                     nxt.data = temp;
+
+                 }
+                 nxt = nxt.next;
+             }
+             current = current.next;
+         }
+
+     }
+     public void display(Node head) {
             if (emptyCheck()) {
                 System.out.println("Empty Linkedlist");
                 return;

@@ -41,18 +41,7 @@ class Node {
                 }
                 return false;
             }
-            public void display (Node head){
-                if (emptyCheck()) {
-                    System.out.println("Empty Linkedlist");
-                    return;
-                }
 
-                Node temp = head;
-                while (temp != null) {
-                    System.out.print(temp.data + "->");
-                    temp = temp.next;
-                }
-            }
     //*********************************UC3 Insert at the tail************************************
             public void insertAtTail(int data) {
             Node newNode = new Node(data);
@@ -68,7 +57,40 @@ class Node {
             temp.next = newNode;
             tail = newNode;
         }
+//************************************UC4 Insert 30 between 56 and 70********************************
 
+        public void insertAtMidPosition(int position, int data) {
+    Node newNode = new Node(data);
+    if (emptyCheck()) {
+        System.out.println("Empty Linkedlist");
+        return;
+    }
+
+    Node temp = head;
+    int idx = 1;
+    while (temp.next != null) {
+        if (idx == position - 1) {
+            break;
+        }
+        idx++;
+        temp = temp.next;
+    }
+    Node nxt = temp.next;
+    temp.next = newNode;
+    newNode.next = nxt;
+}
+        public void display (Node head){
+            if (emptyCheck()) {
+                System.out.println("Empty Linkedlist");
+                return;
+            }
+
+            Node temp = head;
+            while (temp != null) {
+                System.out.print(temp.data + "->");
+                temp = temp.next;
+            }
+        }
 
     }
 

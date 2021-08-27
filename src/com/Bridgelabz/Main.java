@@ -4,9 +4,9 @@ public class Main {
     public static void main(String[] args) {
 
         MyLinkedLink addLinkList = new MyLinkedLink();
-        addLinkList.insertAtTail(56);
-        addLinkList.insertAtTail(30);
-        addLinkList.insertAtTail(70);
+        addLinkList.add(56);
+        addLinkList.add(70);
+        addLinkList.insertAtMidPosition(2,30);
         addLinkList.display(addLinkList.head);
 
     }

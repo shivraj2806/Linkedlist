@@ -5,9 +5,10 @@ public class Main {
 
         MyLinkedLink addLinkList = new MyLinkedLink();
         addLinkList.add(56);
+        addLinkList.add(30);
         addLinkList.add(70);
-        addLinkList.insertAtMidPosition(2,30);
-        addLinkList.display(addLinkList.head);
+        Node newHead = addLinkList.popMethod();
+        addLinkList.display(newHead);
 
     }
 }

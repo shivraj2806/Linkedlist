@@ -79,6 +79,15 @@ class Node {
     temp.next = newNode;
     newNode.next = nxt;
 }
+//*****************************UC5 Delete the the frist element**********************
+public Node popMethod() {
+    if (emptyCheck()) {
+        System.out.println("Empty Linkedlist");
+        return head;
+    }
+    Node newHead = head.next;
+    return newHead;
+}
         public void display (Node head){
             if (emptyCheck()) {
                 System.out.println("Empty Linkedlist");
@@ -91,7 +100,6 @@ class Node {
                 temp = temp.next;
             }
         }
-
     }
 
 

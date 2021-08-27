@@ -8,11 +8,14 @@ public class Main {
         addLinkList.add(30);
         addLinkList.add(70);
         addLinkList.popLastMethod();
-        addLinkList.display(addLinkList.head);
         addLinkList.insertAtMidPosition(3,40);
         addLinkList.display(addLinkList.head);
 
+        addLinkList.showSize();
     }
+
 }
+
+
 
 

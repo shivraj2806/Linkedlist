@@ -13,7 +13,7 @@ class Node {
     public class MyLinkedLink {
         Node head = null;
         Node tail;
-
+   //****************UC1 Creat a simple Linklist*****************************************
         public void add(int data) {
             Node newNode = new Node(data);
             if (head == null) {
@@ -27,26 +27,34 @@ class Node {
             temp.next = newNode;
             tail = newNode;
         }
-        public boolean emptyCheck() {
-            if (head == null) {
-                return true;
 
-            }
-            return false;
+        //******************UC2 Insert at the head*****************************************
+        public void insertAtHead(int data) {
+            Node newNode = new Node(data);
+            newNode.next = head;
+            head = newNode;
         }
-        public void display(Node head) {
-            if (emptyCheck()) {
-                System.out.println("Empty Linkedlist");
-                return;
-            }
+            public boolean emptyCheck () {
+                if (head == null) {
+                    return true;
 
-            Node temp = head;
-            while (temp != null) {
-                System.out.print(temp.data + "->");
-                temp = temp.next;
+                }
+                return false;
             }
+            public void display (Node head){
+                if (emptyCheck()) {
+                    System.out.println("Empty Linkedlist");
+                    return;
+                }
 
+                Node temp = head;
+                while (temp != null) {
+                    System.out.print(temp.data + "->");
+                    temp = temp.next;
+                }
+            }
         }
 
 
-    }
+
+

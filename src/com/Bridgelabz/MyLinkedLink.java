@@ -94,6 +94,18 @@ public Node popMethod() {
        }
        temp.next = null;
    }
+
+   //**************************UC7 Searching method to find node with value 30****************************
+   public boolean searchingMethod(int key) {
+       Node temp = head;
+       while (temp != null) {
+           if (temp.data == key) {
+               return true;
+           }
+           temp = temp.next;
+       }
+       return false;
+   }
         public boolean emptyCheck () {
             if (head == null) {
                 return true;
@@ -114,7 +126,7 @@ public Node popMethod() {
                 temp = temp.next;
             }
         }
-}
+    }
 
 
 

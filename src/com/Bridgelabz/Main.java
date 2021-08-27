@@ -10,5 +10,12 @@ public class Main {
         addLinkList.popLastMethod();
         addLinkList.display(addLinkList.head);
 
+        if (addLinkList.searchingMethod(30)) {
+            System.out.println("True");
+        } else {
+            System.out.println("False");
+        }
     }
 }
+
+

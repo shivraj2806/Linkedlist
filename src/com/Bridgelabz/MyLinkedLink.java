@@ -13,7 +13,8 @@ class Node {
     public class MyLinkedLink {
         Node head = null;
         Node tail;
-   //****************UC1 Creat a simple Linklist*****************************************
+
+        //****************UC1 Creat a simple Linklist*****************************************
         public void add(int data) {
             Node newNode = new Node(data);
             if (head == null) {
@@ -35,8 +36,8 @@ class Node {
             head = newNode;
         }
 
-    //*********************************UC3 Insert at the tail************************************
-            public void insertAtTail(int data) {
+        //*********************************UC3 Insert at the tail************************************
+        public void insertAtTail(int data) {
             Node newNode = new Node(data);
             if (head == null) {
                 insertAtHead(data);
@@ -53,60 +54,63 @@ class Node {
 //************************************UC4 Insert 30 between 56 and 70********************************
 
         public void insertAtMidPosition(int position, int data) {
-    Node newNode = new Node(data);
-    if (emptyCheck()) {
-        System.out.println("Empty Linkedlist");
-        return;
-    }
+            Node newNode = new Node(data);
+            if (emptyCheck()) {
+                System.out.println("Empty Linkedlist");
+                return;
+            }
 
-    Node temp = head;
-    int idx = 1;
-    while (temp.next != null) {
-        if (idx == position - 1) {
-            break;
+            Node temp = head;
+            int idx = 1;
+            while (temp.next != null) {
+                if (idx == position - 1) {
+                    break;
+                }
+                idx++;
+                temp = temp.next;
+            }
+            Node nxt = temp.next;
+            temp.next = newNode;
+            newNode.next = nxt;
         }
-        idx++;
-        temp = temp.next;
-    }
-    Node nxt = temp.next;
-    temp.next = newNode;
-    newNode.next = nxt;
-}
-//*****************************UC5 Delete the  first element**********************
-public Node popMethod() {
-    if (emptyCheck()) {
-        System.out.println("Empty Linkedlist");
-        return head;
-    }
-    Node newHead = head.next;
-    return newHead;
-}
-   //******************************UC6 Delete at lhe last element**************************
-   public void popLastMethod() {
-       if (emptyCheck()) {
-           System.out.println("Empty Linkedlist");
-           return;
-       }
 
-       Node temp = head;
-       while (temp.next.next != null) {
-           temp = temp.next;
-       }
-       temp.next = null;
-   }
+        //*****************************UC5 Delete the  first element**********************
+        public Node popMethod() {
+            if (emptyCheck()) {
+                System.out.println("Empty Linkedlist");
+                return head;
+            }
+            Node newHead = head.next;
+            return newHead;
+        }
 
-   //**************************UC7 Searching method to find node with value 30****************************
-   public boolean searchingMethod(int key) {
-       Node temp = head;
-       while (temp != null) {
-           if (temp.data == key) {
-               return true;
-           }
-           temp = temp.next;
-       }
-       return false;
-   }
-        public boolean emptyCheck () {
+        //******************************UC6 Delete at lhe last element**************************
+        public void popLastMethod() {
+            if (emptyCheck()) {
+                System.out.println("Empty Linkedlist");
+                return;
+            }
+
+            Node temp = head;
+            while (temp.next.next != null) {
+                temp = temp.next;
+            }
+            temp.next = null;
+        }
+
+        //**************************UC7 Searching method to find node with value 30****************************
+        public boolean searchingMethod(int key) {
+            Node temp = head;
+            while (temp != null) {
+                if (temp.data == key) {
+                    return true;
+                }
+                temp = temp.next;
+            }
+            return false;
+        }
+
+        public boolean emptyCheck() {
             if (head == null) {
                 return true;
 
@@ -114,7 +118,7 @@ public Node popMethod() {
             return false;
         }
 
-        public void display (Node head){
+        public void display(Node head) {
             if (emptyCheck()) {
                 System.out.println("Empty Linkedlist");
                 return;

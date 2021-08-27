@@ -9,12 +9,9 @@ public class Main {
         addLinkList.add(70);
         addLinkList.popLastMethod();
         addLinkList.display(addLinkList.head);
+        addLinkList.insertAtMidPosition(3,40);
+        addLinkList.display(addLinkList.head);
 
-        if (addLinkList.searchingMethod(30)) {
-            System.out.println("True");
-        } else {
-            System.out.println("False");
-        }
     }
 }
 
